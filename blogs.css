@@ -1,0 +1,160 @@
+@font-face{
+    font-family:"BiondiSans";
+    src:url("../fonts/biondisans-regular.otf") format("opentype");
+}
+
+/* BASE */
+body{
+    margin:0;
+    font-family:'Space Mono', monospace;
+    background:#05070d;
+    color:#e6edf3;
+    overflow:hidden;
+
+    opacity:0;
+    animation:fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn{
+    to{ opacity:1; }
+}
+
+/* LIGHT RAYS */
+.bg{
+    position:fixed;
+    inset:0;
+    z-index:-10;
+}
+
+.ray{
+    animation:ray 60s ease-in-out infinite;
+    transform-origin:top left;
+}
+
+.r1{ fill:rgba(120,150,255,0.05); }
+.r2{ fill:rgba(120,150,255,0.03); }
+.r3{ fill:rgba(120,150,255,0.02); }
+.r4{ fill:rgba(120,150,255,0.015); }
+
+@keyframes ray{
+    50%{ transform:translate(10px,-5px); }
+}
+
+/* noise + vignette */
+.noise{
+    position:fixed;
+    inset:0;
+    background:url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity:0.06;
+    pointer-events:none;
+}
+
+.vignette{
+    position:fixed;
+    inset:0;
+    box-shadow:inset 0 0 200px black;
+    pointer-events:none;
+}
+
+/* brand */
+.brand{
+    position:fixed;
+    top:50px;
+    left:50px;
+    font-family:"BiondiSans";
+    font-size: 28px;
+    letter-spacing:8px;
+    text-decoration:none;
+    color:white;
+    opacity:0.8;
+}
+
+.brand:hover{
+    opacity:1;
+}
+
+/* layout */
+.layout{
+    display:flex;
+    height:100vh;
+    align-items:center;
+    padding-left:120px;
+}
+
+/* LEFT */
+.container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width:600px;
+}
+
+.title{
+    font-family:"BiondiSans";
+    font-size:34px;
+    letter-spacing:6px;
+}
+
+.subtitle{
+    font-size:12px;
+    opacity:0.5;
+    margin-bottom:10px;
+}
+
+/* links */
+.links{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.link{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    opacity:0.6;
+
+    border-left:1px solid rgba(255,255,255,0.2);
+    padding-left:10px;
+
+    transition:0.2s;
+    width:fit-content;
+}
+
+.link:hover{
+    opacity:1;
+    border-left:1px solid white;
+    transform:translateX(5px);
+}
+
+/* RIGHT PREVIEW */
+.preview{
+    position:fixed;
+    right:80px;
+    top:50%;
+    transform:translateY(-50%);
+    width:320px;
+
+    border-left:1px solid rgba(255,255,255,0.15);
+    padding-left:20px;
+}
+
+#p-title{
+    font-family:"BiondiSans";
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+#p-desc{
+    font-size:12px;
+    opacity:0.6;
+    line-height:1.5;
+}
+
+#p-hint{
+    margin-top:20px;
+    font-size:10px;
+    opacity:0.3;
+    letter-spacing:2px;
+}
