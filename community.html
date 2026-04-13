@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aoiseikou // Community</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/community.css">
+</head>
+
+<body>
+
+<div class="noise"></div>
+<div class="vignette"></div>
+
+<svg viewBox="0 0 1440 900" class="bg">
+    <polygon points="-200,-200 600,0 1200,900 300,900" class="ray r1"/>
+    <polygon points="-200,-200 800,0 1400,900 700,900" class="ray r2"/>
+    <polygon points="-200,-200 900,0 1440,900 1100,900" class="ray r3"/>
+</svg>
+
+<a class="brand" href="home.html">AOISEIKOU</a>
+
+<div class="layout">
+
+    <div class="tree">
+
+        <div class="node group active" data-id="what">What is Aoiseikou</div>
+
+        <div class="node group" data-id="projects">Projects</div>
+        <div class="subnodes" id="projectsNodes">
+            <div class="node sub" data-id="festival">Festival</div>
+            <div class="node sub" data-id="autoshow">Autoshow</div>
+            <div class="node sub" data-id="wildstyle">WildStyle</div>
+            <div class="node sub" data-id="racing">Racing Division</div>
+            <div class="node sub" data-id="blogs">Blogs</div>
+        </div>
+
+        <div class="node group" data-id="people">People</div>
+        <div class="subnodes" id="peopleNodes">
+            <div class="node sub" data-id="nex">Nex</div>
+            <div class="node sub" data-id="chyumi">Chyumi</div>
+            <div class="node sub" data-id="quinton">Quinton</div>
+            <div class="node sub" data-id="lucas">Lucas</div>
+            <div class="node sub" data-id="cece">Cece</div>
+        </div>
+
+    </div>
+
+    <div class="panel">
+        <h1 id="title">What is Aoiseikou</h1>
+        <p id="desc"></p>
+        <div id="extra"></div>
+    </div>
+
+</div>
+
+<script src="js/community.js"></script>
+</body>
+</html>
